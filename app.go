@@ -167,7 +167,7 @@ func isHaveArticlesPostedIn2020(articles []entity.Article) bool {
 func articlesThatPostedBeforeAugust2019(articles []entity.Article) []entity.Article {
 	//Article with posted in AUGUST 2019 will be not included
 	layout := "2006-01-02T15:04:05"
-	dateToCompare := time.Date(2019, 8, 0, 0, 0, 0, 0, time.UTC)
+	dateToCompare := time.Date(2019, 7, 0, 0, 0, 0, 0, time.UTC)
 	var results []entity.Article
 	for _, v := range articles {
 		PublishedAt, err := time.Parse(layout, v.PublishedAt)
