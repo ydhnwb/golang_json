@@ -13,6 +13,8 @@ import (
 )
 
 func main() {
+
+	//You have ':' in key json, 'articles:' shouldbe 'articles', but i leave as it is
 	data, err := ioutil.ReadFile("data.json")
 	if err != nil {
 		log.Fatal(err)
