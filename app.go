@@ -115,6 +115,17 @@ func main() {
 		fmt.Fprintf(os.Stdout, "%s", data6)
 	}
 
+	println("===============USERS WHO BORN IN 1986=====================")
+	if len(articlesBeforeAugust2019) == 0 {
+		println("No users born in 1986")
+	} else {
+		data7, err := json.MarshalIndent(usersThatBornIn1986, "", " ")
+		if err != nil {
+			log.Fatal("Cannot encode to JSON ", err)
+		}
+		fmt.Fprintf(os.Stdout, "%s", data7)
+	}
+
 }
 
 //assumption that "tips" and "Tips" are same
